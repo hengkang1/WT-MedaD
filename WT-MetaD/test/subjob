@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N WT-RMSD
+#PBS -l nodes=1:ppn=12
+#PBS -j n
+#PBS -q batch
+#PBS -e ${PBS_JOBNAME}.err
+#PBS -o ${PBS_JOBNAME}.out
+                 
+cd $PBS_O_WORKDIR
+NP=`cat $PBS_NODEFILE|wc -l`
+#EXEC=/share/apps/vasp/vasp.535.impi
+#source /share/apps/MPI/impi/5.0.1.035/intel64/bin/mpivars.sh
+#mpirun -np $NP -machinefile $PBS_NODEFILE $EXEC > ${PBS_JOBNAME}_${NP}Core_${PBS_JOBID}.out
+WT_HOPE
+
+date 
+hostname
+sleep 10
+date
