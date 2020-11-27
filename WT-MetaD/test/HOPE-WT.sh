@@ -8,6 +8,7 @@ setenv Con_Ini model_300K.lammps            #The inital confguration
 setenv P_T eam/alloy                        #Porential type (only for metal)  
 setenv Potential ZrCu.lammps.eam #Potental file name
 setenv Temperature 300                      #simulation temperature
+setenv Pressure 0
 setenv timestep 0.002                       #simulation timestep
 setenv step 10000000     #simulation step
 #________________________________________simulation setting in WT-metaD
