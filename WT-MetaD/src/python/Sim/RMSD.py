@@ -70,6 +70,8 @@ with open('RMSD-WT.sh') as p:
                 Colname=value[2]
             if(value[1]=="width"):
                 width=value[2]
+            if(value[1]=="Pressure"):
+                Pressure=value[2]
 if not os.path.exists(Con_Ini):
     print "there is no configuration file, please check it out!"
     sys.exit()
@@ -221,7 +223,7 @@ for i in range(0,len(inter)):
     f.write('##########initilization of velocities'+'\n')
     f.write('velocity all create $T 29612 mom yes rot no'+'\n')
     f.write(''+'\n')
-    f.write('fix 1 all npt temp $T $T 0.2 aniso 0 0 2'+'\n')
+    f.write('fix 1 all npt temp $T $T 0.2 aniso '+Pressure+' '+Pressure+' 2'+'\n')
     f.write(''+'\n')
     f.write('thermo 1000'+'\n')
     f.write('thermo_style custom step temp press pe ke etotal enthalpy vol density'+'\n')
