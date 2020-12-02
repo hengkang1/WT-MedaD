@@ -1,0 +1,5 @@
+gfortran -o ./bin/WT_RMSD ./src/script/WT_RMSD.f90
+gfortran -o ./bin/WT_HOPE ./src/script/WT_HOPE.f90
+gfortran -o ./bin/Neibortest ./src/script/neibortest.f90
+gfortran -o ./bin/CalDF ./src/script/CalDF.f90
+gfortran -o ./bin/CalDF1 ./src/script/CalDF1.f90
